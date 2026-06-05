@@ -3,7 +3,9 @@ package kkashin.dev;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TaskManager {
     private final ObjectProvider<Task> taskProvider;
 

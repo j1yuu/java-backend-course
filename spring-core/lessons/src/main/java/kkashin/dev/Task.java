@@ -2,20 +2,21 @@ package kkashin.dev;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+@Component
 public class Task {
     private final String name;
-    private final long duration;
+    private final Integer duration;
     private final String uuid = UUID.randomUUID().toString();
 
-    public Task() {
-        this.name = "Task";
-        this.duration = 60L;
-    }
-
-    public Task(String name, long duration) {
+    public Task(
+            @Value("${task.name}") String name,
+            @Value("${task.duration}") Integer duration
+            ) {
         this.name = name;
         this.duration = duration;
     }

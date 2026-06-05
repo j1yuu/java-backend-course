@@ -10,11 +10,14 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        TaskManager taskManager = context.getBean(TaskManager.class);
+        TaskProperties taskProperties = context.getBean(TaskProperties.class);
+        System.out.println(taskProperties);
 
-        taskManager.printTask();
-        taskManager.printTask();
-        taskManager.printTask();
+//        TaskManager taskManager = context.getBean(TaskManager.class);
+
+//        taskManager.printTask();
+//        taskManager.printTask();
+//        taskManager.printTask();
 
         context.close();
     }

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0443c88-3cae-4f1b-9527-09ff827d0e1c" name="Changes" comment="" />
+    <list default="true" id="c0443c88-3cae-4f1b-9527-09ff827d0e1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bean-lifecycle/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../bean-lifecycle/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +27,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,67 +66,70 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0025916521954992" />
-      <entry key="MS500" value="1.4461796434251128" />
-      <entry key="S2" value="2.777928864190882" />
-      <entry key="S5" value="3.7771104621255414" />
-      <entry key="S10" value="4.547231240923084" />
-      <entry key="S30" value="5.404597864857307" />
-      <entry key="S60" value="5.849719821631249" />
-      <entry key="M2" value="7.456674750260246" />
-      <entry key="M5" value="21.660849211615286" />
-      <entry key="M10" value="56.36051584181303" />
-      <entry key="M15" value="83.82638691382431" />
-      <entry key="M30" value="128.7125132141349" />
-      <entry key="H1" value="161.1522911006669" />
-      <entry key="H2" value="180.73886591148678" />
-      <entry key="H4" value="191.51245801940715" />
-      <entry key="D1" value="201.03377792567494" />
-      <entry key="W1" value="202.71781900838238" />
+      <entry key="MS100" value="3.77575268484754E-45" />
+      <entry key="MS500" value="1.323892983537051E-9" />
+      <entry key="S2" value="0.012558665999994837" />
+      <entry key="S5" value="0.5175313606204324" />
+      <entry key="S10" value="2.187442669932374" />
+      <entry key="S30" value="9.613087050175345" />
+      <entry key="S60" value="19.476014422587813" />
+      <entry key="M2" value="34.73760362980915" />
+      <entry key="M5" value="79.27632988861315" />
+      <entry key="M10" value="143.83061428562846" />
+      <entry key="M15" value="192.77691944227658" />
+      <entry key="M30" value="288.61637999264747" />
+      <entry key="H1" value="378.24813080960416" />
+      <entry key="H2" value="443.0643701046815" />
+      <entry key="H4" value="482.5963613344599" />
+      <entry key="D1" value="519.9830456577512" />
+      <entry key="W1" value="526.8431136778855" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5978731401935348E-195" />
-      <entry key="S2" value="2.6788026611238332E-49" />
-      <entry key="S5" value="5.539669074546178E-20" />
-      <entry key="S10" value="3.6020227385728675E-10" />
-      <entry key="S30" value="0.001566684785069495" />
-      <entry key="S60" value="0.07836536208790307" />
-      <entry key="M2" value="0.6572719212376134" />
-      <entry key="M5" value="4.650399963851807" />
-      <entry key="M10" value="12.487516772927556" />
-      <entry key="M15" value="18.088793947553775" />
-      <entry key="M30" value="26.682065273602174" />
-      <entry key="H1" value="32.60731734487761" />
-      <entry key="H2" value="36.09841424739962" />
-      <entry key="H4" value="37.99487713696974" />
-      <entry key="D1" value="39.65799589901896" />
-      <entry key="W1" value="39.95094719509973" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000755382" />
+      <entry key="S2" value="1.0029480975947667" />
+      <entry key="S5" value="1.097233684753663" />
+      <entry key="S10" value="1.3118419653300535" />
+      <entry key="S30" value="1.7232713899197774" />
+      <entry key="S60" value="2.373581904494923" />
+      <entry key="M2" value="4.448312265599573" />
+      <entry key="M5" value="10.102265441454977" />
+      <entry key="M10" value="16.399601262984866" />
+      <entry key="M15" value="21.710435570600378" />
+      <entry key="M30" value="34.21130096509913" />
+      <entry key="H1" value="47.43604538799123" />
+      <entry key="H2" value="57.48227487337179" />
+      <entry key="H4" value="63.73446102422163" />
+      <entry key="D1" value="69.7114976446875" />
+      <entry key="W1" value="70.81392643655352" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9819066685767439" />
-      <entry key="MS500" value="1.4389230665732056" />
-      <entry key="S2" value="2.774233430235181" />
-      <entry key="S5" value="3.7749868748158937" />
-      <entry key="S10" value="4.545878586562589" />
-      <entry key="S30" value="5.4055457682703265" />
-      <entry key="S60" value="5.926259818450824" />
-      <entry key="M2" value="8.106682166250339" />
-      <entry key="M5" value="26.284169176020875" />
-      <entry key="M10" value="68.8057938171876" />
-      <entry key="M15" value="101.87237426040127" />
-      <entry key="M30" value="155.36151555834542" />
-      <entry key="H1" value="193.73895218281473" />
-      <entry key="H2" value="216.82572118198132" />
-      <entry key="H4" value="229.50121920321354" />
-      <entry key="D1" value="240.69070512818863" />
-      <entry key="W1" value="242.66861228761962" />
+      <entry key="MS100" value="0.013230395505664488" />
+      <entry key="MS500" value="0.42103147710378375" />
+      <entry key="S2" value="0.8173346263847361" />
+      <entry key="S5" value="1.4739073584503177" />
+      <entry key="S10" value="3.345756048980906" />
+      <entry key="S30" value="11.212780738545268" />
+      <entry key="S60" value="21.75598687159779" />
+      <entry key="M2" value="39.106601987097164" />
+      <entry key="M5" value="89.30264203882629" />
+      <entry key="M10" value="160.16068373232935" />
+      <entry key="M15" value="214.423404074521" />
+      <entry key="M30" value="322.77630147941693" />
+      <entry key="H1" value="425.648644783839" />
+      <entry key="H2" value="500.52519887041063" />
+      <entry key="H4" value="546.3189608911777" />
+      <entry key="D1" value="589.6923855551365" />
+      <entry key="W1" value="597.6567271066672" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3Eh1kKToQZbBYH8x4PVWf1rH6bq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -122,7 +152,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java"
+    "onboarding.tips.debug.path": "/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RunManager">
