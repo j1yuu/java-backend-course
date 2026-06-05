@@ -1,5 +1,7 @@
 package kkashin.dev;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.ObjectProvider;
 
 public class TaskManager {
@@ -15,5 +17,15 @@ public class TaskManager {
 
     public void printTask() {
         System.out.println("Current task: " + taskProvider.getObject().toString());
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        System.out.println("taskManager postConstruct");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("taskManager preDestroy");
     }
 }

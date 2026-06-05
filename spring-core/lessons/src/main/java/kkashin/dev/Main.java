@@ -15,5 +15,7 @@ public class Main {
         taskManager.printTask();
         taskManager.printTask();
         taskManager.printTask();
+
+        context.close();
     }
 }

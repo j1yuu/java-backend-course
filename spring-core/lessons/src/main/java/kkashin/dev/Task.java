@@ -1,5 +1,8 @@
 package kkashin.dev;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 import java.util.UUID;
 
 public class Task {
@@ -15,6 +18,16 @@ public class Task {
     public Task(String name, long duration) {
         this.name = name;
         this.duration = duration;
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        System.out.println("task post construct");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("task pre destroy");
     }
 
 
