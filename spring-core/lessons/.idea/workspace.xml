@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0443c88-3cae-4f1b-9527-09ff827d0e1c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="14" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0025916521954992" />
+      <entry key="MS500" value="1.4461796434251128" />
+      <entry key="S2" value="2.777928864190882" />
+      <entry key="S5" value="3.7771104621255414" />
+      <entry key="S10" value="4.547231240923084" />
+      <entry key="S30" value="5.404597864857307" />
+      <entry key="S60" value="5.849719821631249" />
+      <entry key="M2" value="7.456674750260246" />
+      <entry key="M5" value="21.660849211615286" />
+      <entry key="M10" value="56.36051584181303" />
+      <entry key="M15" value="83.82638691382431" />
+      <entry key="M30" value="128.7125132141349" />
+      <entry key="H1" value="161.1522911006669" />
+      <entry key="H2" value="180.73886591148678" />
+      <entry key="H4" value="191.51245801940715" />
+      <entry key="D1" value="201.03377792567494" />
+      <entry key="W1" value="202.71781900838238" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.5978731401935348E-195" />
+      <entry key="S2" value="2.6788026611238332E-49" />
+      <entry key="S5" value="5.539669074546178E-20" />
+      <entry key="S10" value="3.6020227385728675E-10" />
+      <entry key="S30" value="0.001566684785069495" />
+      <entry key="S60" value="0.07836536208790307" />
+      <entry key="M2" value="0.6572719212376134" />
+      <entry key="M5" value="4.650399963851807" />
+      <entry key="M10" value="12.487516772927556" />
+      <entry key="M15" value="18.088793947553775" />
+      <entry key="M30" value="26.682065273602174" />
+      <entry key="H1" value="32.60731734487761" />
+      <entry key="H2" value="36.09841424739962" />
+      <entry key="H4" value="37.99487713696974" />
+      <entry key="D1" value="39.65799589901896" />
+      <entry key="W1" value="39.95094719509973" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9819066685767439" />
+      <entry key="MS500" value="1.4389230665732056" />
+      <entry key="S2" value="2.774233430235181" />
+      <entry key="S5" value="3.7749868748158937" />
+      <entry key="S10" value="4.545878586562589" />
+      <entry key="S30" value="5.4055457682703265" />
+      <entry key="S60" value="5.926259818450824" />
+      <entry key="M2" value="8.106682166250339" />
+      <entry key="M5" value="26.284169176020875" />
+      <entry key="M10" value="68.8057938171876" />
+      <entry key="M15" value="101.87237426040127" />
+      <entry key="M30" value="155.36151555834542" />
+      <entry key="H1" value="193.73895218281473" />
+      <entry key="H2" value="216.82572118198132" />
+      <entry key="H4" value="229.50121920321354" />
+      <entry key="D1" value="240.69070512818863" />
+      <entry key="W1" value="242.66861228761962" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3Eh1kKToQZbBYH8x4PVWf1rH6bq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.lessons [:kkashin.dev.Main.main()].executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "lessons",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kkashin.dev.Main" />
+      <module name="lessons.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kkashin.dev.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0443c88-3cae-4f1b-9527-09ff827d0e1c" name="Changes" comment="" />
+      <created>1780616129549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780616129549</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: progress so far">
+      <option name="closed" value="true" />
+      <created>1780616774569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1780616774569</updated>
+    </task>
+    <task id="LOCAL-00002" summary="lesson: bean lifecycle">
+      <option name="closed" value="true" />
+      <created>1780617755905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1780617755905</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: progress so far" />
+    <MESSAGE value="lesson: bean lifecycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson: bean lifecycle" />
+  </component>
+</project>
