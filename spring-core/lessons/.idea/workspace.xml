@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0443c88-3cae-4f1b-9527-09ff827d0e1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bean-lifecycle/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../bean-lifecycle/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/aop/Loggable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/aop/LoggingAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -66,61 +65,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="3.77575268484754E-45" />
-      <entry key="MS500" value="1.323892983537051E-9" />
-      <entry key="S2" value="0.012558665999994837" />
-      <entry key="S5" value="0.5175313606204324" />
-      <entry key="S10" value="2.187442669932374" />
-      <entry key="S30" value="9.613087050175345" />
-      <entry key="S60" value="19.476014422587813" />
-      <entry key="M2" value="34.73760362980915" />
-      <entry key="M5" value="79.27632988861315" />
-      <entry key="M10" value="143.83061428562846" />
-      <entry key="M15" value="192.77691944227658" />
-      <entry key="M30" value="288.61637999264747" />
-      <entry key="H1" value="378.24813080960416" />
-      <entry key="H2" value="443.0643701046815" />
-      <entry key="H4" value="482.5963613344599" />
-      <entry key="D1" value="519.9830456577512" />
-      <entry key="W1" value="526.8431136778855" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000002325312949" />
+      <entry key="S5" value="1.0095217519547324" />
+      <entry key="S10" value="1.2631410999493826" />
+      <entry key="S30" value="6.356793712895145" />
+      <entry key="S60" value="14.571795870879036" />
+      <entry key="M2" value="24.877159227093284" />
+      <entry key="M5" value="44.72284087640688" />
+      <entry key="M10" value="80.1269484649183" />
+      <entry key="M15" value="121.10826840364615" />
+      <entry key="M30" value="233.97676680626074" />
+      <entry key="H1" value="371.56679699226646" />
+      <entry key="H2" value="487.68747803176166" />
+      <entry key="H4" value="564.8181244388074" />
+      <entry key="D1" value="641.9459838394285" />
+      <entry key="W1" value="656.5279383767195" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000755382" />
-      <entry key="S2" value="1.0029480975947667" />
-      <entry key="S5" value="1.097233684753663" />
-      <entry key="S10" value="1.3118419653300535" />
-      <entry key="S30" value="1.7232713899197774" />
-      <entry key="S60" value="2.373581904494923" />
-      <entry key="M2" value="4.448312265599573" />
-      <entry key="M5" value="10.102265441454977" />
-      <entry key="M10" value="16.399601262984866" />
-      <entry key="M15" value="21.710435570600378" />
-      <entry key="M30" value="34.21130096509913" />
-      <entry key="H1" value="47.43604538799123" />
-      <entry key="H2" value="57.48227487337179" />
-      <entry key="H4" value="63.73446102422163" />
-      <entry key="D1" value="69.7114976446875" />
-      <entry key="W1" value="70.81392643655352" />
+      <entry key="MS100" value="5.098816233532292E-109" />
+      <entry key="MS500" value="2.1952999725462696E-22" />
+      <entry key="S2" value="3.8492265097599925E-6" />
+      <entry key="S5" value="0.006826830851576791" />
+      <entry key="S10" value="0.08369230635391521" />
+      <entry key="S30" value="0.6248851993312149" />
+      <entry key="S60" value="1.7725543762936138" />
+      <entry key="M2" value="4.751323312188168" />
+      <entry key="M5" value="14.08497303465977" />
+      <entry key="M10" value="27.338072490931786" />
+      <entry key="M15" value="38.025839585761304" />
+      <entry key="M30" value="60.79387946240043" />
+      <entry key="H1" value="85.23666188101922" />
+      <entry key="H2" value="105.11133913747861" />
+      <entry key="H4" value="118.15815451224626" />
+      <entry key="D1" value="131.13673497985758" />
+      <entry key="W1" value="133.5850776247884" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.013230395505664488" />
-      <entry key="MS500" value="0.42103147710378375" />
-      <entry key="S2" value="0.8173346263847361" />
-      <entry key="S5" value="1.4739073584503177" />
-      <entry key="S10" value="3.345756048980906" />
-      <entry key="S30" value="11.212780738545268" />
-      <entry key="S60" value="21.75598687159779" />
-      <entry key="M2" value="39.106601987097164" />
-      <entry key="M5" value="89.30264203882629" />
-      <entry key="M10" value="160.16068373232935" />
-      <entry key="M15" value="214.423404074521" />
-      <entry key="M30" value="322.77630147941693" />
-      <entry key="H1" value="425.648644783839" />
-      <entry key="H2" value="500.52519887041063" />
-      <entry key="H4" value="546.3189608911777" />
-      <entry key="D1" value="589.6923855551365" />
-      <entry key="W1" value="597.6567271066672" />
+      <entry key="MS100" value="4.696443227176344E-6" />
+      <entry key="MS500" value="0.08597136363373398" />
+      <entry key="S2" value="0.5414917385558852" />
+      <entry key="S5" value="0.7967745582703633" />
+      <entry key="S10" value="1.214249600164195" />
+      <entry key="S30" value="6.860918291131379" />
+      <entry key="S60" value="16.21564948331114" />
+      <entry key="M2" value="29.50947644357443" />
+      <entry key="M5" value="58.70844374253579" />
+      <entry key="M10" value="107.37414986450295" />
+      <entry key="M15" value="159.04796190137557" />
+      <entry key="M30" value="294.6974268355578" />
+      <entry key="H1" value="456.7497869375498" />
+      <entry key="H2" value="592.7649315983474" />
+      <entry key="H4" value="682.957009886312" />
+      <entry key="D1" value="773.0791206601054" />
+      <entry key="W1" value="790.1124915473787" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -135,30 +134,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.lessons [:kkashin.dev.Main.main()].executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "lessons",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.lessons [:kkashin.dev.Main.main()].executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lessons&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kkashin.dev.Main" />

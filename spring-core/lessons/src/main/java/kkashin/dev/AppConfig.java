@@ -7,6 +7,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @ComponentScan("kkashin.dev")
+@EnableAspectJAutoProxy
 @PropertySource("classpath:application.properties")
 public class AppConfig {
 

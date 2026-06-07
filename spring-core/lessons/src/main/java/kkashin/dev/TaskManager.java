@@ -2,6 +2,7 @@ package kkashin.dev;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import kkashin.dev.aop.Loggable;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Component;
 
@@ -17,8 +18,12 @@ public class TaskManager {
         return taskProvider;
     }
 
-    public void printTask() {
-        System.out.println("Current task: " + taskProvider.getObject().toString());
+    @Loggable(value="INFO", times=2)
+    public Task printTask() {
+        Task task = taskProvider.getObject();
+        System.out.println("Current task: " + task.toString());
+
+        return task;
     }
 
     @PostConstruct
