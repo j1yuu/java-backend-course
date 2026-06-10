@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0443c88-3cae-4f1b-9527-09ff827d0e1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/aop/Loggable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/aop/LoggingAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kkashin/dev/TaskManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="25" />
+    <option name="cachedIndexableFilesCount" value="14" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -41,13 +47,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/../.." value="lessons" />
+        <entry key="$PROJECT_DIR$/../.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -58,62 +65,65 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0025916521954992" />
-      <entry key="MS500" value="1.4461796434251128" />
-      <entry key="S2" value="2.777928864190882" />
-      <entry key="S5" value="3.7771104621255414" />
-      <entry key="S10" value="4.547231240923084" />
-      <entry key="S30" value="5.404597864857307" />
-      <entry key="S60" value="5.849719821631249" />
-      <entry key="M2" value="7.456674750260246" />
-      <entry key="M5" value="21.660849211615286" />
-      <entry key="M10" value="56.36051584181303" />
-      <entry key="M15" value="83.82638691382431" />
-      <entry key="M30" value="128.7125132141349" />
-      <entry key="H1" value="161.1522911006669" />
-      <entry key="H2" value="180.73886591148678" />
-      <entry key="H4" value="191.51245801940715" />
-      <entry key="D1" value="201.03377792567494" />
-      <entry key="W1" value="202.71781900838238" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000002325312949" />
+      <entry key="S5" value="1.0095217519547324" />
+      <entry key="S10" value="1.2631410999493826" />
+      <entry key="S30" value="6.356793712895145" />
+      <entry key="S60" value="14.571795870879036" />
+      <entry key="M2" value="24.877159227093284" />
+      <entry key="M5" value="44.72284087640688" />
+      <entry key="M10" value="80.1269484649183" />
+      <entry key="M15" value="121.10826840364615" />
+      <entry key="M30" value="233.97676680626074" />
+      <entry key="H1" value="371.56679699226646" />
+      <entry key="H2" value="487.68747803176166" />
+      <entry key="H4" value="564.8181244388074" />
+      <entry key="D1" value="641.9459838394285" />
+      <entry key="W1" value="656.5279383767195" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5978731401935348E-195" />
-      <entry key="S2" value="2.6788026611238332E-49" />
-      <entry key="S5" value="5.539669074546178E-20" />
-      <entry key="S10" value="3.6020227385728675E-10" />
-      <entry key="S30" value="0.001566684785069495" />
-      <entry key="S60" value="0.07836536208790307" />
-      <entry key="M2" value="0.6572719212376134" />
-      <entry key="M5" value="4.650399963851807" />
-      <entry key="M10" value="12.487516772927556" />
-      <entry key="M15" value="18.088793947553775" />
-      <entry key="M30" value="26.682065273602174" />
-      <entry key="H1" value="32.60731734487761" />
-      <entry key="H2" value="36.09841424739962" />
-      <entry key="H4" value="37.99487713696974" />
-      <entry key="D1" value="39.65799589901896" />
-      <entry key="W1" value="39.95094719509973" />
+      <entry key="MS100" value="5.098816233532292E-109" />
+      <entry key="MS500" value="2.1952999725462696E-22" />
+      <entry key="S2" value="3.8492265097599925E-6" />
+      <entry key="S5" value="0.006826830851576791" />
+      <entry key="S10" value="0.08369230635391521" />
+      <entry key="S30" value="0.6248851993312149" />
+      <entry key="S60" value="1.7725543762936138" />
+      <entry key="M2" value="4.751323312188168" />
+      <entry key="M5" value="14.08497303465977" />
+      <entry key="M10" value="27.338072490931786" />
+      <entry key="M15" value="38.025839585761304" />
+      <entry key="M30" value="60.79387946240043" />
+      <entry key="H1" value="85.23666188101922" />
+      <entry key="H2" value="105.11133913747861" />
+      <entry key="H4" value="118.15815451224626" />
+      <entry key="D1" value="131.13673497985758" />
+      <entry key="W1" value="133.5850776247884" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9819066685767439" />
-      <entry key="MS500" value="1.4389230665732056" />
-      <entry key="S2" value="2.774233430235181" />
-      <entry key="S5" value="3.7749868748158937" />
-      <entry key="S10" value="4.545878586562589" />
-      <entry key="S30" value="5.4055457682703265" />
-      <entry key="S60" value="5.926259818450824" />
-      <entry key="M2" value="8.106682166250339" />
-      <entry key="M5" value="26.284169176020875" />
-      <entry key="M10" value="68.8057938171876" />
-      <entry key="M15" value="101.87237426040127" />
-      <entry key="M30" value="155.36151555834542" />
-      <entry key="H1" value="193.73895218281473" />
-      <entry key="H2" value="216.82572118198132" />
-      <entry key="H4" value="229.50121920321354" />
-      <entry key="D1" value="240.69070512818863" />
-      <entry key="W1" value="242.66861228761962" />
+      <entry key="MS100" value="4.696443227176344E-6" />
+      <entry key="MS500" value="0.08597136363373398" />
+      <entry key="S2" value="0.5414917385558852" />
+      <entry key="S5" value="0.7967745582703633" />
+      <entry key="S10" value="1.214249600164195" />
+      <entry key="S30" value="6.860918291131379" />
+      <entry key="S60" value="16.21564948331114" />
+      <entry key="M2" value="29.50947644357443" />
+      <entry key="M5" value="58.70844374253579" />
+      <entry key="M10" value="107.37414986450295" />
+      <entry key="M15" value="159.04796190137557" />
+      <entry key="M30" value="294.6974268355578" />
+      <entry key="H1" value="456.7497869375498" />
+      <entry key="H2" value="592.7649315983474" />
+      <entry key="H4" value="682.957009886312" />
+      <entry key="D1" value="773.0791206601054" />
+      <entry key="W1" value="790.1124915473787" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2,
@@ -124,26 +134,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.lessons [:kkashin.dev.Main.main()].executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.lessons [:kkashin.dev.Main.main()].executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lessons&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/kkashin/shared/vm-1/code/java/java-backend-course/spring-core/lessons/src/main/java/kkashin/dev/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kkashin.dev.Main" />
@@ -160,7 +174,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -197,15 +210,7 @@
       <option name="project" value="LOCAL" />
       <updated>1780617755905</updated>
     </task>
-    <task id="LOCAL-00003" summary="feat: application properties lesson">
-      <option name="closed" value="true" />
-      <created>1780621928316</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1780621928316</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +219,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: progress so far" />
     <MESSAGE value="lesson: bean lifecycle" />
-    <MESSAGE value="feat: application properties lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: application properties lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson: bean lifecycle" />
   </component>
 </project>
