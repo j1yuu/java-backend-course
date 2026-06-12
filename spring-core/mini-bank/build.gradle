@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'kkashin.dev'
+version = '1.0-SNAPSHOT'
+
+configurations {
+    mockitoAgent
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.aspectj:aspectjweaver:1.9.25.1'
+    implementation 'org.springframework:spring-aop:7.0.7'
+    implementation 'org.springframework:spring-context:7.0.7'
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.mockito:mockito-core:5.23.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.23.0'
+    mockitoAgent('org.mockito:mockito-core:5.23.0') {
+        transitive = false
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(Test).configureEach {
+    jvmArgs "-javaagent:${configurations.mockitoAgent.asPath}"
+}
