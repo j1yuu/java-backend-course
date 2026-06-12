@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: hibernate-core
+    image: postgres:18
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=hibernate-core
+    ports:
+      - "5432:5432"
