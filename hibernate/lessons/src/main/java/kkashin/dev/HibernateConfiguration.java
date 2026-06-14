@@ -3,6 +3,7 @@ package kkashin.dev;
 import kkashin.dev.model.Group;
 import kkashin.dev.model.Profile;
 import kkashin.dev.model.Student;
+import kkashin.dev.model.Course;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,7 @@ public class HibernateConfiguration {
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Profile.class)
                 .addAnnotatedClass(Group.class)
+                .addAnnotatedClass(Course.class)
                 .addPackage("kkashin.dev")
                 .setProperty("hibernate.connection.driver_class", "org.postgresql.Driver")
                 .setProperty("hibernate.connection.url", "jdbc:postgresql://127.0.0.1:5432/hibernate-lessons")
