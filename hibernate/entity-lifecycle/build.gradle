@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClass = 'kkashin.dev.Main'
+}
+
+run {
+    jvmArgs(
+            '-DsocksProxyHost=',
+            '-DsocksProxyPort=',
+            '-Dhttp.proxyHost=',
+            '-Dhttp.proxyPort=',
+            '-Dhttps.proxyHost=',
+            '-Dhttps.proxyPort='
+    )
+}
+
+group = 'kkashin.dev'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context:7.0.8'
+    implementation 'org.postgresql:postgresql:42.7.7'
+    implementation 'org.hibernate.orm:hibernate-core:7.4.0.Final'
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
