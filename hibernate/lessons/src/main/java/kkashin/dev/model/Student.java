@@ -1,4 +1,4 @@
-package kkashin.dev;
+package kkashin.dev.model;
 
 import jakarta.persistence.*;
 
@@ -14,6 +14,9 @@ public class Student {
 
     @Column
     private Integer age;
+
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    private Profile profile;
 
     public Student() {}
 
@@ -47,5 +50,13 @@ public class Student {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 }
