@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: hibernate-lessons
+    image: postgres:16
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=hibernate-lessons
+    ports:
+      - "5432:5432"
