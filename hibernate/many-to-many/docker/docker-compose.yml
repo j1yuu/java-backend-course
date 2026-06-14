@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: many-to-many
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=many-to-many
+    ports:
+      - "5432:5432"
