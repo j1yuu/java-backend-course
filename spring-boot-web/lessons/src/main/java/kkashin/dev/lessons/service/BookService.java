@@ -1,9 +1,7 @@
 package kkashin.dev.lessons.service;
 
 import kkashin.dev.lessons.model.Book;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
@@ -53,7 +51,7 @@ public class BookService {
     public Book findById(Long id) {
         var book = bookMap.get(id);
 
-        if (book == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found");
+        if (book == null) throw new NoSuchElementException("Book not found");
         return book;
     }
 
@@ -75,13 +73,13 @@ public class BookService {
     }
 
     public void deleteById(Long id) {
-        if (bookMap.get(id) == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found");
+        if (bookMap.get(id) == null) throw new NoSuchElementException("Book not found");
 
         bookMap.remove(id);
     }
 
     public Book updateBook(Long id, Book book) {
-        if (bookMap.get(id) == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found");
+        if (bookMap.get(id) == null) throw new NoSuchElementException("Book not found");
 
         var updated = new Book(
                 id,

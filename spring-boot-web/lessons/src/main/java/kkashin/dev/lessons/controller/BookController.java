@@ -1,13 +1,17 @@
 package kkashin.dev.lessons.controller;
 
+import jakarta.validation.Valid;
+import kkashin.dev.lessons.dto.ServerExceptionDto;
 import kkashin.dev.lessons.model.Book;
 import kkashin.dev.lessons.service.BookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -37,7 +41,7 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<Book> createBook(@RequestBody Book bookToCreate) {
+    public ResponseEntity<Book> createBook(@RequestBody @Valid Book bookToCreate) {
         log.info("Post req for bookToCreate: {}", bookToCreate);
         var book = bookService.createBook(bookToCreate);
 
@@ -55,7 +59,7 @@ public class BookController {
     }
 
     @PutMapping("/{id}")
-    public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
+    public Book updateBook(@PathVariable Long id, @RequestBody @Valid Book book) {
         log.info("Update req for updateBook: {}", book);
         return bookService.updateBook(id, book);
     }
