@@ -45,4 +45,13 @@ public class InMemoryPetRepository implements PetRepository {
     public void delete(Long id) {
         petMap.remove(id);
     }
+
+    @Override
+    public void deletePetsByUserId(Long id) {
+        var petsToDelete = petMap.values().stream().filter(p -> Objects.equals(p.getUserId(), id)).toList();
+
+        for (var pet : petsToDelete) {
+            petMap.remove(pet.getId());
+        }
+    }
 }

@@ -52,6 +52,7 @@ public class UserService {
             throw new NoSuchElementException("User with given id was not found: %s".formatted(id));
 
         userRepository.delete(id);
+        petRepository.deletePetsByUserId(id);
     }
 
     public UserDto findById(Long id) {

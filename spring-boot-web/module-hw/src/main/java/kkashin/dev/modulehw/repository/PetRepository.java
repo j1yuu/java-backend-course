@@ -11,4 +11,5 @@ public interface PetRepository {
     Optional<Pet> findById(Long id);
     List<Pet> findPetsByUserId(Long id);
     void delete(Long id);
+    void deletePetsByUserId(Long id);
 }
