@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: lessons
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jpa-lessons
+    password: test
+    username: admin
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+server:
+  port: 8081
+  error:
+    include-errors: always
