@@ -1,8 +1,9 @@
-package kkashin.dev.modulehw.dto;
+package kkashin.dev.modulehw.dto.userDtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import kkashin.dev.modulehw.dto.petDtos.PetDto;
 
 import java.util.List;
 

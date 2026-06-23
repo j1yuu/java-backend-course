@@ -1,8 +1,9 @@
 package kkashin.dev.modulehw.controller;
 
 import jakarta.validation.Valid;
-import kkashin.dev.modulehw.dto.CreatePetDto;
-import kkashin.dev.modulehw.dto.PetDto;
+import kkashin.dev.modulehw.dto.petDtos.CreatePetDto;
+import kkashin.dev.modulehw.dto.petDtos.PetDto;
+import kkashin.dev.modulehw.dto.petDtos.UpdatePetDto;
 import kkashin.dev.modulehw.service.PetService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,12 +32,30 @@ public class PetController {
         return ResponseEntity.status(HttpStatus.CREATED).body(pet);
     }
 
+    @PutMapping
+    public ResponseEntity<PetDto> updatePet(@RequestBody @Valid UpdatePetDto updatePetDto) {
+        logger.info("Update request for updatePet");
+
+        var pet = petService.update(updatePetDto);
+
+        return ResponseEntity.status(HttpStatus.OK).body(pet);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PetDto> findById(@PathVariable @Valid Long id) {
+        logger.info("Get request for findById pet");
+
+        var pet = petService.findbyId(id);
+
+        return ResponseEntity.status(HttpStatus.OK).body(pet);
+    }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePet(@PathVariable Long id) {
+    public ResponseEntity<Void> deletePet(@PathVariable @Valid Long id) {
         logger.info("Delete request for deletePet");
 
         petService.delete(id);
 
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 }

@@ -1,9 +1,7 @@
 package kkashin.dev.modulehw.controller;
 
-import kkashin.dev.modulehw.dto.CreateUserDto;
-import kkashin.dev.modulehw.dto.UserDto;
-import kkashin.dev.modulehw.service.PetService;
-import kkashin.dev.modulehw.service.UserService;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.UserDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

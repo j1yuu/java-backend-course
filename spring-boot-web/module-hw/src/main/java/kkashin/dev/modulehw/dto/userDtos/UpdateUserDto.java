@@ -1,4 +1,4 @@
-package kkashin.dev.modulehw.dto;
+package kkashin.dev.modulehw.dto.userDtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.annotation.Nullable;
@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import kkashin.dev.modulehw.dto.petDtos.PetDto;
 import org.hibernate.validator.constraints.Length;
 
 import java.util.List;

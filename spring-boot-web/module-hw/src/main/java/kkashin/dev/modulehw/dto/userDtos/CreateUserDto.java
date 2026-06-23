@@ -1,4 +1,4 @@
-package kkashin.dev.modulehw.dto;
+package kkashin.dev.modulehw.dto.userDtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.*;

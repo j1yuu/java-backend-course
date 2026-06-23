@@ -1,8 +1,8 @@
 package kkashin.dev.modulehw.controller;
 
-import kkashin.dev.modulehw.dto.CreatePetDto;
-import kkashin.dev.modulehw.dto.CreateUserDto;
-import kkashin.dev.modulehw.dto.PetDto;
+import kkashin.dev.modulehw.dto.petDtos.CreatePetDto;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
+import kkashin.dev.modulehw.dto.petDtos.PetDto;
 import kkashin.dev.modulehw.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class PetControllerTest {
 
         var createdPet = objectMapper.readValue(createdPetString, PetDto.class);
 
-        assertEquals(0, createdPet.id());
+        assertEquals(0L, createdPet.id());
         assertEquals(user.id(), createdPet.userId());
         assertEquals("Pet", createdPet.name());
     }

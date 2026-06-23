@@ -1,6 +1,6 @@
 package kkashin.dev.modulehw.repository.impl;
 
-import kkashin.dev.modulehw.dto.CreatePetDto;
+import kkashin.dev.modulehw.dto.petDtos.CreatePetDto;
 import kkashin.dev.modulehw.mappers.PetMapper;
 import kkashin.dev.modulehw.model.Pet;
 import kkashin.dev.modulehw.repository.PetRepository;
@@ -39,6 +39,13 @@ public class InMemoryPetRepository implements PetRepository {
         return petMap.values().stream()
                 .filter(p -> Objects.equals(p.getUserId(), id))
                 .toList();
+    }
+
+    @Override
+    public Pet update(Pet pet) {
+        petMap.put(pet.getId(), pet);
+
+        return pet;
     }
 
     @Override

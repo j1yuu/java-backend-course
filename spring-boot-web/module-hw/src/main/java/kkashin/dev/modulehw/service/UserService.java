@@ -1,8 +1,8 @@
 package kkashin.dev.modulehw.service;
 
-import kkashin.dev.modulehw.dto.CreateUserDto;
-import kkashin.dev.modulehw.dto.UpdateUserDto;
-import kkashin.dev.modulehw.dto.UserDto;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.UpdateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.UserDto;
 import kkashin.dev.modulehw.mappers.UserMapper;
 import kkashin.dev.modulehw.repository.PetRepository;
 import kkashin.dev.modulehw.repository.UserRepository;
@@ -31,12 +31,10 @@ public class UserService {
     }
 
     public UserDto update(UpdateUserDto updateUserDto) {
-        var currentUserOptional = userRepository.findById(updateUserDto.id());
+        var currentUser = userRepository.findById(updateUserDto.id()).orElseThrow(
+                () -> new NoSuchElementException("User with given id was not found: %s".formatted(updateUserDto.id()))
+        );
 
-        if (currentUserOptional.isEmpty())
-            throw new NoSuchElementException("User with given id was not found: %s".formatted(updateUserDto.id()));
-
-        var currentUser = currentUserOptional.get();
         var userToUpdate = UserMapper.mapUpdateDtoOrCurrentToUser(updateUserDto, currentUser);
 
         var updatedUser = userRepository.update(userToUpdate);
@@ -46,22 +44,20 @@ public class UserService {
     }
 
     public void delete(Long id) {
-        var currentUser = userRepository.findById(id);
-
-        if (currentUser.isEmpty())
-            throw new NoSuchElementException("User with given id was not found: %s".formatted(id));
+        userRepository.findById(id).orElseThrow(
+                () -> new NoSuchElementException("User with given id was not found: %s".formatted(id))
+        );
 
         userRepository.delete(id);
         petRepository.deletePetsByUserId(id);
     }
 
     public UserDto findById(Long id) {
-        var userOptional = userRepository.findById(id);
-
-        if (userOptional.isEmpty())
-            throw new NoSuchElementException("User with given id was not found: %s".formatted(id));
+        var user = userRepository.findById(id).orElseThrow(
+                () ->  new NoSuchElementException("User with given id was not found: %s".formatted(id))
+        );
 
         var userPets = petRepository.findPetsByUserId(id);
-        return UserMapper.mapUserAndPetsToUserDto(userOptional.get(), userPets);
+        return UserMapper.mapUserAndPetsToUserDto(user, userPets);
     }
 }

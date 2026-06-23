@@ -1,6 +1,6 @@
 package kkashin.dev.modulehw.repository.impl;
 
-import kkashin.dev.modulehw.dto.CreateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
 import kkashin.dev.modulehw.mappers.UserMapper;
 import kkashin.dev.modulehw.model.User;
 import kkashin.dev.modulehw.repository.UserRepository;

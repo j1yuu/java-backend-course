@@ -1,6 +1,6 @@
 package kkashin.dev.modulehw.repository;
 
-import kkashin.dev.modulehw.dto.CreateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
 import kkashin.dev.modulehw.model.User;
 
 import java.util.Optional;

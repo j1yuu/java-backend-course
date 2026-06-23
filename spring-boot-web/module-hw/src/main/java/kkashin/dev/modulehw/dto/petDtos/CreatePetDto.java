@@ -1,4 +1,4 @@
-package kkashin.dev.modulehw.dto;
+package kkashin.dev.modulehw.dto.petDtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

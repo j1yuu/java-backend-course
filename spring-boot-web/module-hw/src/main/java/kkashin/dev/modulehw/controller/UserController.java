@@ -1,9 +1,9 @@
 package kkashin.dev.modulehw.controller;
 
 import jakarta.validation.Valid;
-import kkashin.dev.modulehw.dto.CreateUserDto;
-import kkashin.dev.modulehw.dto.UpdateUserDto;
-import kkashin.dev.modulehw.dto.UserDto;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.UpdateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.UserDto;
 import kkashin.dev.modulehw.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

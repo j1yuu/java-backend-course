@@ -1,9 +1,9 @@
 package kkashin.dev.modulehw.mappers;
 
-import kkashin.dev.modulehw.dto.CreateUserDto;
-import kkashin.dev.modulehw.dto.PetDto;
-import kkashin.dev.modulehw.dto.UpdateUserDto;
-import kkashin.dev.modulehw.dto.UserDto;
+import kkashin.dev.modulehw.dto.userDtos.CreateUserDto;
+import kkashin.dev.modulehw.dto.petDtos.PetDto;
+import kkashin.dev.modulehw.dto.userDtos.UpdateUserDto;
+import kkashin.dev.modulehw.dto.userDtos.UserDto;
 import kkashin.dev.modulehw.model.Pet;
 import kkashin.dev.modulehw.model.User;
 

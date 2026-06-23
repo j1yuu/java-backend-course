@@ -1,7 +1,8 @@
 package kkashin.dev.modulehw.service;
 
-import kkashin.dev.modulehw.dto.CreatePetDto;
-import kkashin.dev.modulehw.dto.PetDto;
+import kkashin.dev.modulehw.dto.petDtos.CreatePetDto;
+import kkashin.dev.modulehw.dto.petDtos.PetDto;
+import kkashin.dev.modulehw.dto.petDtos.UpdatePetDto;
 import kkashin.dev.modulehw.mappers.PetMapper;
 import kkashin.dev.modulehw.repository.PetRepository;
 import kkashin.dev.modulehw.repository.UserRepository;
@@ -23,10 +24,33 @@ public class PetService {
     }
 
     public PetDto save(CreatePetDto createPetDto) {
-        if (userRepository.findById(createPetDto.userId()).isEmpty())
-            throw new NoSuchElementException("User with given id was not found: %s".formatted(createPetDto.userId()));
+        userRepository.findById(createPetDto.userId()).orElseThrow(
+                () -> new NoSuchElementException("User with given id was not found: %s".formatted(createPetDto.userId()))
+        );
 
         var pet = petRepository.save(createPetDto);
+
+        return PetMapper.mapPetToPetDto(pet);
+    }
+
+    public PetDto update(UpdatePetDto updatePetDto) {
+        var currentPet = petRepository.findById(updatePetDto.id()).orElseThrow(
+                () -> new NoSuchElementException("Pet with given id was not found: %s".formatted(updatePetDto.id()))
+        );
+
+        var updatablePet = PetMapper.mapUpdateDtoOrCurrentToPet(updatePetDto, currentPet);
+        userRepository.findById(updatablePet.getUserId()).orElseThrow(
+                () -> new NoSuchElementException("User with given id was not found: %s".formatted(updatablePet.getUserId()))
+        );
+
+        var updatedPet = petRepository.update(updatablePet);
+        return PetMapper.mapPetToPetDto(updatedPet);
+    }
+
+    public PetDto findbyId(Long id) {
+        var pet = petRepository.findById(id).orElseThrow(
+                () -> new NoSuchElementException("Pet with given id was not found: %s".formatted(id))
+        );
 
         return PetMapper.mapPetToPetDto(pet);
     }
