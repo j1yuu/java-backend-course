@@ -2,6 +2,7 @@ package kkashin.dev.lessons.controller;
 
 import jakarta.validation.Valid;
 import kkashin.dev.lessons.mappers.BookDtoDomainMapper;
+import kkashin.dev.lessons.model.BookSearchFilter;
 import kkashin.dev.lessons.model.dto.BookDto;
 import kkashin.dev.lessons.service.BookService;
 import org.slf4j.Logger;
@@ -26,13 +27,10 @@ public class BookController {
     }
 
     @GetMapping
-    public List<BookDto> getAllBooks(
-            @RequestParam(value = "authorName", required = false) String authorName,
-            @RequestParam(value = "maxCost", required = false) Integer maxCost
-    ) {
+    public List<BookDto> getAllBooks(@ModelAttribute BookSearchFilter bookSearchFilter) {
         log.info("Get req for getAllBooks");
 
-        var books = bookService.searchAllBooks(authorName, maxCost);
+        var books = bookService.searchAllBooks(bookSearchFilter);
 
         return books.stream().map(bookDtoDomainMapper::toDto).toList();
     }

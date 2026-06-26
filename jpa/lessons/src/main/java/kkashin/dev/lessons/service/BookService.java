@@ -3,10 +3,14 @@ package kkashin.dev.lessons.service;
 import jakarta.persistence.EntityNotFoundException;
 import kkashin.dev.lessons.mappers.BookEntityDomainMapper;
 import kkashin.dev.lessons.model.Book;
+import kkashin.dev.lessons.model.BookSearchFilter;
 import kkashin.dev.lessons.model.dto.BookDto;
 import kkashin.dev.lessons.model.entity.BookEntity;
 import kkashin.dev.lessons.repository.BookRepository;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,8 +33,17 @@ public class BookService {
         seedBooks();
     }
 
-    public List<Book> searchAllBooks(String authorName, Integer maxCost) {
-        return bookRepository.findAllByAuthorNameIsAndCostLessThan(authorName, maxCost).stream()
+    public List<Book> searchAllBooks(BookSearchFilter bookSearchFilter) {
+        var pageSize = bookSearchFilter.pageSize() != null
+                ? bookSearchFilter.pageSize()
+                : 3;
+        var pageNumber = bookSearchFilter.pageNumber() != null
+                ? bookSearchFilter.pageNumber()
+                : 0;
+
+        Pageable pageable = Pageable.ofSize(pageSize).withPage(pageNumber);
+
+        return bookRepository.searchBooks(bookSearchFilter.authorName(), bookSearchFilter.maxCost(), pageable).stream()
                 .map(bookEntityDomainMapper::toDomain)
                 .toList();
     }
@@ -43,6 +56,7 @@ public class BookService {
         return bookEntityDomainMapper.toDomain(entity);
     }
 
+    @Transactional
     public Book createBook(Book bookToCreate) {
         var bookToSave = bookEntityDomainMapper.toEntity(bookToCreate);
 
@@ -51,6 +65,7 @@ public class BookService {
         return bookEntityDomainMapper.toDomain(savedBook);
     }
 
+    @Transactional
     public void deleteById(Long id) {
         if (!bookRepository.existsById(id))
                 throw new EntityNotFoundException("Book not found: %s".formatted(id));
@@ -58,15 +73,23 @@ public class BookService {
         bookRepository.deleteById(id);
     }
 
+    @Transactional
     public Book updateBook(Long id, Book book) {
         if (!bookRepository.existsById(id))
             throw new EntityNotFoundException("Book not found: %s".formatted(id));
 
-        var entityToUpdate = bookEntityDomainMapper.toEntity(book);
-        entityToUpdate.setId(id);
+        bookRepository.updateBook(
+                id,
+                book.name(),
+                book.authorName(),
+                book.publicationYear(),
+                book.pageNumber(),
+                book.cost()
+        );
 
-        var updated = bookRepository.save(entityToUpdate);
-        return bookEntityDomainMapper.toDomain(updated);
+        return bookEntityDomainMapper.toDomain(
+                bookRepository.findById(id).orElseThrow()
+        );
     }
 
     private void seedBooks() {
