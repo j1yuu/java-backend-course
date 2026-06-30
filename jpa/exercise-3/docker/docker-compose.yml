@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: jpa-exercise-3
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=jpa-exercise-3
+    ports:
+      - "5432:5432"
