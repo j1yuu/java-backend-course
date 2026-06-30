@@ -2,7 +2,9 @@ package kkashin.dev.lessons.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.*;
+import kkashin.dev.lessons.model.Author;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public record BookDto(
@@ -13,10 +15,9 @@ public record BookDto(
         @NotBlank
         String name,
 
-        @Size(max = 30)
-        @NotBlank
-        @JsonProperty("author_name")
-        String authorName,
+        @Nullable
+        @JsonProperty("author_id")
+        Long authorId,
 
         @Min(0)
         @Max(2026)

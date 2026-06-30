@@ -1,6 +1,7 @@
 package kkashin.dev.lessons.model.entity;
 
 import jakarta.persistence.*;
+import kkashin.dev.lessons.model.Author;
 
 @Entity
 @Table(name = "books")
@@ -12,8 +13,9 @@ public class BookEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "author_name", nullable = false)
-    private String authorName;
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 
     @Column(name = "publication_year", nullable = false)
     private Integer publicationYear;
@@ -28,14 +30,14 @@ public class BookEntity {
     public BookEntity(
             Long id,
             String name,
-            String authorName,
+            Author author,
             Integer publicationYear,
             Integer pageNumber,
             Integer cost
     ) {
         this.id = id;
         this.name = name;
-        this.authorName = authorName;
+        this.author = author;
         this.publicationYear = publicationYear;
         this.pageNumber = pageNumber;
         this.cost = cost;
@@ -55,14 +57,6 @@ public class BookEntity {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getAuthorName() {
-        return authorName;
-    }
-
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
     }
 
     public Integer getPublicationYear() {
@@ -87,5 +81,13 @@ public class BookEntity {
 
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }

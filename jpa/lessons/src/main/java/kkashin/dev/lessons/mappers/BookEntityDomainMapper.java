@@ -10,7 +10,7 @@ public class BookEntityDomainMapper {
         return new BookEntity(
                 book.id(),
                 book.name(),
-                book.authorName(),
+                book.author(),
                 book.publicationYear(),
                 book.pageNumber(),
                 book.cost()
@@ -21,7 +21,7 @@ public class BookEntityDomainMapper {
         return new Book(
                 bookEntity.getId(),
                 bookEntity.getName(),
-                bookEntity.getAuthorName(),
+                bookEntity.getAuthor(),
                 bookEntity.getPublicationYear(),
                 bookEntity.getPageNumber(),
                 bookEntity.getCost()

@@ -10,7 +10,7 @@ public class BookDtoDomainMapper {
         return new BookDto(
                 book.id(),
                 book.name(),
-                book.authorName(),
+                book.author().id(),
                 book.publicationYear(),
                 book.pageNumber(),
                 book.cost()
@@ -21,7 +21,7 @@ public class BookDtoDomainMapper {
         return new Book(
                 bookDto.id(),
                 bookDto.name(),
-                bookDto.authorName(),
+                null,
                 bookDto.publicationYear(),
                 bookDto.pageNumber(),
                 bookDto.cost()
