@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+        order_updates: true
+
+logging:
+  level:
+    org.hibernate.SQL: warn
+    org.testcontainers: warn
+    com.github.dockerjava: warn
