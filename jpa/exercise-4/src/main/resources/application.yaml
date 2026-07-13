@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: exercise-4
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/jpa-exercise-4"
+    password: test
+    username: admin
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+jpa:
+  hibernate:
+    ddl-auto: none
+
+server:
+  port: 8081
+  error:
+    include-errors: always
+
