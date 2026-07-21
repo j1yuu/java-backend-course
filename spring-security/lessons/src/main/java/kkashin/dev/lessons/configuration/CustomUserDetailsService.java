@@ -2,6 +2,7 @@ package kkashin.dev.lessons.configuration;
 
 import kkashin.dev.lessons.model.UserEntity;
 import kkashin.dev.lessons.repository.UserRepository;
+import kkashin.dev.lessons.security.CurrentUserDetails;
 import lombok.NonNull;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -30,9 +31,6 @@ public class CustomUserDetailsService implements UserDetailsService {
             );
         }
 
-        return User.withUsername(user.getUsername())
-                .password(user.getPasswordHash())
-                .authorities(user.getRole().toString())
-                .build();
+        return CurrentUserDetails.from(user);
     }
 }

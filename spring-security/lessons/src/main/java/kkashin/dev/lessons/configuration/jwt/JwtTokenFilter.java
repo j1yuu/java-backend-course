@@ -5,6 +5,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import kkashin.dev.lessons.model.UserEntity;
+import kkashin.dev.lessons.security.CurrentUserDetails;
 import kkashin.dev.lessons.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -41,16 +42,16 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
             try {
                 String login = jwtTokenManager.getLogin(jwt);
-
                 UserEntity user = userService.findByLogin(login);
+                CurrentUserDetails principal = CurrentUserDetails.from(user);
 
-                var token = new UsernamePasswordAuthenticationToken(
-                        user,
+                var authentication = new UsernamePasswordAuthenticationToken(
+                        principal,
                         null,
-                        List.of(new SimpleGrantedAuthority(user.getRole().toString()))
+                        principal.getAuthorities()
                 );
 
-                SecurityContextHolder.getContext().setAuthentication(token);
+                SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (Exception e) {
                 SecurityContextHolder.clearContext();
                 log.error("Error while reading jwt: {}", e.getMessage());

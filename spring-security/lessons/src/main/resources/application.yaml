@@ -22,3 +22,7 @@ app:
     issuer: lessons
     access-ttl: 86400000
     secret-base64: ${JWT_SECRET_KEY}
+  admin:
+    username: ${APP_ADMIN_USERNAME}
+    email: ${APP_ADMIN_EMAIL}
+    password: ${APP_ADMIN_PASSWORD}

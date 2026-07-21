@@ -3,6 +3,7 @@ package kkashin.dev.lessons.service;
 import kkashin.dev.lessons.configuration.jwt.JwtTokenManager;
 import kkashin.dev.lessons.model.UserEntity;
 import kkashin.dev.lessons.model.dto.auth.LoginRequestDto;
+import kkashin.dev.lessons.security.CurrentUserDetails;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,13 +28,13 @@ public class AuthenticationService {
         return jwtTokenManager.generateToken(loginRequestDto.username());
     }
 
-    public UserEntity getCurrentUser() {
+    public CurrentUserDetails getCurrentUser() {
         var authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if (authentication == null) {
             throw new IllegalStateException("Authentication not present");
-        }
 
-        return (UserEntity) authentication.getPrincipal();
+        }
+        return (CurrentUserDetails) authentication.getPrincipal();
     }
 }
