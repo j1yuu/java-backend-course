@@ -17,6 +17,7 @@ public class JwtTokenManager {
         return Jwts
                 .builder()
                 .subject(login)
+                .issuer(jwtProperties.issuer())
                 .signWith(jwtProperties.secretBase64())
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + jwtProperties.accessTtl()))

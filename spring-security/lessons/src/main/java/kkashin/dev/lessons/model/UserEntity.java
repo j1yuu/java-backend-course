@@ -62,23 +62,12 @@ public class UserEntity {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Post> posts = new ArrayList<>();
 
+    @Column(name = "role", nullable = false, length = 32)
     private UserRole role;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false, nullable = false)
     private Instant createdAt;
-
-    public UserEntity(
-            String username,
-            String email,
-            UserRole role,
-            List<Post> posts
-    ) {
-        this.username = username;
-        this.email = email;
-        this.role = role;
-        this.posts = posts;
-    }
 
     public UserEntity(RegisterRequestDto registerRequestDto, String passwordHash) {
         this.username = registerRequestDto.username();
@@ -99,5 +88,5 @@ public class UserEntity {
                 posts.stream().map(Post::toDto).toList(),
                 userEntity.getCreatedAt()
         );
-    };
+    }
 }

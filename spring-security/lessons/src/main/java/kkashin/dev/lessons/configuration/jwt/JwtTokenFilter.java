@@ -13,12 +13,13 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 import java.util.List;
 
+@Component
 @RequiredArgsConstructor
 public class JwtTokenFilter extends OncePerRequestFilter {
     private final static Logger log = LoggerFactory.getLogger(JwtTokenFilter.class);
@@ -51,7 +52,8 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
                 SecurityContextHolder.getContext().setAuthentication(token);
             } catch (Exception e) {
-                log.error("Error while reading jwt", e);
+                SecurityContextHolder.clearContext();
+                log.error("Error while reading jwt: {}", e.getMessage());
             }
         }
 

@@ -17,6 +17,8 @@ server:
   error:
     include-errors: always
 
-jwt:
-  lifetime: 86400000
-  secret-key: ${JWT_SECRET_KEY}
+app:
+  jwt:
+    issuer: lessons
+    access-ttl: 86400000
+    secret-base64: ${JWT_SECRET_KEY}
