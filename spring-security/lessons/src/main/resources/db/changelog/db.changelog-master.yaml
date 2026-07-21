@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: log/001-create-user-table.xml
+      relativeToChangelogFile: true
+  - include:
+      file: log/002-create-posts-table.xml
+      relativeToChangelogFile: true
+  - include:
+      file: log/003-create-comments-table.xml
+      relativeToChangelogFile: true

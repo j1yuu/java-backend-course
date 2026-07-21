@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: lessons
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/security-lessons"
+    password: test
+    username: admin
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+jpa:
+  hibernate:
+    ddl-auto: none
+
+server:
+  port: 8081
+  error:
+    include-errors: always
+
+jwt:
+  lifetime: 86400000
+  secret-key: ${JWT_SECRET_KEY}

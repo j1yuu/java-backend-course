@@ -1,0 +1,11 @@
+services:
+  db:
+    container_name: spring-security-pg
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=security-lessons
+    ports:
+      - "5432:5432"

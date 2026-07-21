@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+            http://www.liquibase.org/xml/ns/dbchangelog
+            https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd">
+
+    <changeSet id="002-create-posts-table" author="kkashin">
+
+        <createTable tableName="posts">
+            <column name="id"
+                    type="BIGINT"
+                    autoIncrement="true">
+                <constraints
+                        primaryKey="true"
+                        primaryKeyName="pk_posts"
+                        nullable="false"/>
+            </column>
+
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="content" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="status" type="VARCHAR(32)" defaultValue="DRAFT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="created_at"
+                    type="TIMESTAMP WITH TIME ZONE"
+                    defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="updated_at"
+                    type="TIMESTAMP WITH TIME ZONE"
+                    defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint
+                constraintName="fk_posts_user"
+                baseTableName="posts"
+                baseColumnNames="user_id"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                onDelete="SET NULL"/>
+
+        <createIndex
+                tableName="posts"
+                indexName="idx_posts_user_id">
+            <column name="user_id"/>
+        </createIndex>
+
+        <createTable tableName="post_categories">
+            <column name="post_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="category" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint
+                constraintName="fk_post_categories_post"
+                baseTableName="post_categories"
+                baseColumnNames="post_id"
+                referencedTableName="posts"
+                referencedColumnNames="id"
+                onDelete="CASCADE"/>
+
+        <addPrimaryKey
+                tableName="post_categories"
+                columnNames="post_id, category"
+                constraintName="pk_post_categories"/>
+
+        <rollback>
+            <dropTable tableName="post_categories"/>
+            <dropTable tableName="posts"/>
+        </rollback>
+
+    </changeSet>
+
+</databaseChangeLog>
